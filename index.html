@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>neX K209</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+   <!-- Custom Styles -->
+  <link href="CSS\styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Nav Section with logo and menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+  <div class="container">
+    <!-- Logo a la izquierda -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/nex.jpg" alt="Tribe Logo" style="height: 75px;">
+    </a>
+
+    <!-- Hamburguer menu mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu align right -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#videos">Videos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Follow Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section with Background Video -->
+<header id="hero" class="vh-100 position-relative text-white">
+  <video class="hero-video" autoplay muted loop>
+    <source src="Assets\2smokey4u.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero-overlay text-center p-4 rounded">
+    <h1>Welcome to neX</h1>
+    <p>Join us and conquer the battlegrounds!</p>
+    <a href="#contact" class="btn btn-primary px-4">Contact Us</a>
+  </div>
+</header>
+
+<!-- Who we are -->
+<section id="about" class="py-5 text-center bg-dark text-white">
+  <div class="container">
+    <h2>This is neX</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magnam, in vero dolores consectetur id magni, voluptatibus odio natus laborum reiciendis non porro dolorum deserunt consequatur dignissimos expedita culpa quia.
+    Mollitia, provident animi aliquid qui saepe a at impedit nam tenetur nesciunt perspiciatis, repudiandae atque dicta tempore id iste quas eos dolores. Laboriosam iusto, quo eveniet iste sunt consequatur consequuntur.
+    Est odio mollitia laboriosam. Eius expedita iusto delectus asperiores non est aliquid, nihil ab blanditiis ea ut maxime recusandae sit voluptate consequatur fugiat sunt quod qui possimus rem explicabo! Iste!
+    </p>
+  </div>
+</section>
+
+<!-- Videos Section -->
+<section id="videos" class="py-5 bg-secondary text-white">
+  <div class="container">
+    <h2 class="mb-4 text-center">Epic Moments</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Get in Touch</h2>
+    <form id="contactForm" method="POST" class="mx-auto" style="max-width:600px;">
+      <input type="hidden" name="_subject" value="New message from neX landing page">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://martinmoran.github.io/VR_neX/">
+
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input id="email" type="email" name="email" class="form-control" placeholder="Your Email" required>
+        <div class="invalid-feedback">
+          Please enter a valid email address.
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" rows="4" class="form-control" placeholder="Write your message..." required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary px-5">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- CONFIRMATION MODAL -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title w-100" id="successModalLabel">Menssage sent!</h5>
+      </div>
+      <div class="modal-body">
+        Thank you for reaching us! We'll contact you soon!
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <!-- Social media -->
+<section class="py-5 bg-black text-center text-white">
+  <h2 class="mb-4">Follow Us</h2>
+  <div class="d-flex justify-content-center gap-4">
+    <!-- Discord -->
+    <a href="https://discord.gg/tu-invite" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+      <i class="fab fa-discord fa-2x"></i>
+    </a>
+    <!-- Telegram -->
+    <a href="https://t.me/tu-canal" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+      <i class="fab fa-telegram fa-2x"></i>
+    </a>
+    <!-- YouTube -->
+    <a href="https://youtube.com/tu-canal" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark text-center text-white">
+  <p>© 2025 neX Tribe – All rights reserved</p>
+  <p>See you on the battlefield!</p>
+  <p>Designed by TincherDev</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validation and modal -->
+<script>
+  const form = document.getElementById("contactForm");
+  const emailInput = document.getElementById("email");
+  const modal = new bootstrap.Modal(document.getElementById('successModal'));
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
+      emailInput.classList.add("is-invalid");
+      emailInput.classList.remove("is-valid");
+      return;
+    } else {
+      emailInput.classList.remove("is-invalid");
+      emailInput.classList.add("is-valid");
+    }
+
+    // Show modal
+    modal.show();
+
+    // Form sent after modal show
+    setTimeout(() => {
+      form.action = "https://formsubmit.co/c57abbfcb00784ca9742d9926a72ee9e"; // Your email
+      form.submit();
+    }, 1500);
+  });
+</script>
+</body>
+</html>
