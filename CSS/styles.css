@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 html {
   scroll-behavior: smooth;
+}
+
+.no-border-radius {
+  border-radius: 0 !important;
 }
 
 .navbar-nav .nav-link {
@@ -66,21 +72,138 @@ header::after {
   backdrop-filter: blur(2px); /* optional: background light */
 }
 
+.card-bg {
+  background-image: rgba(40, 20, 10, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 1200px; /* mantiene tope de altura */
+  filter: brightness(0.85); /* oscurece igual que antes */
+  font-family: 'Cinzel', serif; /* fuente medieval */
+}
+
+.glass-bg {
+  background: rgba(40, 20, 10, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(160, 120, 60, 0.6);
+  font-family: 'Cinzel', serif;
+}
+
+.medieval-box {
+  border: 3px solid #a97c50;
+  background: rgba(70, 40, 20, 0.6);  
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  font-family: 'Cinzel', serif;
+  color: #f5efe0; /* texto claro para contraste */
+}
+
+/*
+.medieval-font {
+  font-family: 'MedievalSharp', cursive;
+  color: #f0e6d2;
+  text-shadow: 1px 1px 2px #000;
+} */
+
+.fixed-box {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #c2a774;
+  background-color: rgba(25, 25, 25, 0.6);
+  font-size: 0.95rem;
+}
+
+#result table {
+  table-layout: auto;
+  width: 80%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#result th, #result td {
+  width: auto;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 8px;
+  border: 1px solid #aaa;
+}
+
+/* Redes Sociales */
 .fa-discord { color: #5865F2; }
 .fa-telegram { color: #229ED9; }
 .fa-youtube { color: #FF0000; }
 
+
+/* Estilo adicional para formulario */
+select, input {
+  background-color: #2e1f14;
+  color: #fceabb;
+  border: 1px solid #a97c50;
+  border-radius: 6px;
+  padding: 0.2rem;
+}
+
 /* Mobile */
 @media (max-width: 576px) {
-    .hero-video {
-        object-fit: contain;
-        background-color: black;
+  .hero-video {
+      object-fit: contain;
+      background-color: black;
+  }
+  .medieval-box {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .result-box {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+
+  h2.medieval-font {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  select, input {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  .card-img {
+    height: 100vh;
+    object-position: center;
   }
 }
 
+/* Tablet */
 @media (max-width: 768px) {
-    .hero-video {
-        object-fit: contain;
-        background-color: black;
+  .hero-video {
+      object-fit: contain;
+      background-color: black;
+  }
+
+  .medieval-box {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .result-box {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  h2.medieval-font {
+    font-size: 1.4rem;
   }
 }

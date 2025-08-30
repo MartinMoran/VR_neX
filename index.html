@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>neX K209</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font Medieval opcional -->
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
    <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
    <!-- Font Awesome CSS -->
@@ -39,6 +41,9 @@
           <a class="nav-link" href="#videos">Videos</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#troop-calculator">Calculator</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
         <li class="nav-item">
@@ -58,7 +63,7 @@
   <div class="hero-overlay text-center p-4 rounded">
     <h1>Welcome to neX</h1>
     <p>Join us and conquer the battlegrounds!</p>
-    <a href="#contact" class="btn btn-primary px-4">Contact Us</a>
+    <a href="#contact" id="myBtn" class="btn btn-danger px-4">Contact Us</a>
   </div>
 </header>
 
@@ -89,6 +94,146 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Calculator -->
+<section id="troop-calculator" class="py-5">
+  <div class="card position-relative bg-dark no-border-radius card-bg">
+        
+        <div class="glass-bg text-white p-4 text-center medieval-box mx-2">
+
+          <h2 class="medieval-font mb-4">Troop Calculator</h2>
+          <p class="medieval-font mb-4">You can calculate choosing total might or quantity</p>
+          
+          <!-- Troop selection -->
+          <div class="mb-3 text-start">
+            <label class="medieval-font" for="type">Troop type:</label>
+            <select class="medieval-font" id="type">
+              <option class="medieval-font" value="Pikemen">Pikemen</option>
+              <option class="medieval-font" value="Infantry">Infantry</option>
+              <option class="medieval-font" value="Archer">Archer</option>
+              <option class="medieval-font" value="Porter">Porter</option>
+            </select>
+          </div>
+          <!-- Calculation mode -->
+          <div class="mb-3 text-start">
+            <label class="medieval-font" for="mode">Choose quantity or might:</label>
+            <select class="medieval-font" id="mode">
+              <option class="medieval-font" value="quantity">Quantity</option>
+              <option class="medieval-font" value="might">Might</option>
+            </select>
+          </div>
+          <!-- User inputs -->
+          <div id="inputContainer" class="mb-3 text-start"></div>
+          <!-- Error message -->
+          <div id="resultDiv" class="mb-3 text-start"></div>
+          
+          <!-- Table -->
+          <div id="result" class="text-start rounded p-3 fixed-box bg-dark bg-opacity-50 medieval-font">
+            <table id="troop-table">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Level</th>
+                  <th>Name</th>
+                  <th>Food</th>
+                  <th>Wood</th>
+                  <th>Stone</th>
+                  <th>Gold</th>
+                  <th>Total might</th>
+                  <th>Total time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- T1 -->
+                <tr data-tier="T1">
+                  <td class="img"><img src="Assets/pikemen_t1.jpg" alt="Pikemen" width="40"></td>
+                  <td class="level">T1</td>
+                  <td class="name">Pikemen</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+                <!-- T2 -->
+                <tr data-tier="T2">
+                  <td class="img"><img src="Assets/pikemen_t2.jpg" alt="Lancers" width="40"></td>
+                  <td class="level">T2</td>
+                  <td class="name">Lancers</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+                <!-- T3 -->
+                <tr data-tier="T3">
+                  <td class="img"><img src="Assets/pikemen_t3.jpg" alt="Toughened Lancer" width="40"></td>
+                  <td class="level">T3</td>
+                  <td class="name">Toughened Lancer</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+                <!-- T4 -->
+                <tr data-tier="T4">
+                  <td class="img"><img src="Assets/pikemen_t4.jpg" alt="Armored Lancers" width="40"></td>
+                  <td class="level">T4</td>
+                  <td class="name">Armored Lancers</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+                <!-- T5 -->
+                <tr data-tier="T5">
+                  <td class="img"><img src="Assets/pikemen_t5.jpg" alt="Heavy Lancers" width="40"></td>
+                  <td class="level">T5</td>
+                  <td class="name">Heavy Lancers</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+                <!-- T6 -->
+                <tr data-tier="T6">
+                  <td class="img"><img src="Assets/pikemen_t6.jpg" alt="Elite Lancer" width="40"></td>
+                  <td class="level">T6</td>
+                  <td class="name">Elite Lancer</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+                <!-- T7 -->
+                <tr data-tier="T7">
+                  <td class="img"><img src="Assets/pikemen_t7.jpg" alt="Blessed Lancers" width="40"></td>
+                  <td class="level">T7</td>
+                  <td class="name">Blessed Lancers</td>
+                  <td class="food">0</td>
+                  <td class="wood">0</td>
+                  <td class="stone">0</td>
+                  <td class="gold">0</td>
+                  <td class="might">0</td>
+                  <td class="time">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
   </div>
 </section>
 
@@ -163,37 +308,11 @@
   <p>Designed by TincherDev</p>
 </footer>
 
+<!-- Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Validation and modal -->
-<script>
-  const form = document.getElementById("contactForm");
-  const emailInput = document.getElementById("email");
-  const modal = new bootstrap.Modal(document.getElementById('successModal'));
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.value)) {
-      emailInput.classList.add("is-invalid");
-      emailInput.classList.remove("is-valid");
-      return;
-    } else {
-      emailInput.classList.remove("is-invalid");
-      emailInput.classList.add("is-valid");
-    }
-
-    // Show modal
-    modal.show();
-
-    // Form sent after modal show
-    setTimeout(() => {
-      form.action = "https://formsubmit.co/c57abbfcb00784ca9742d9926a72ee9e"; // Your email
-      form.submit();
-    }, 1500);
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<!-- My JS -->
+<script src="JS\calculator.js"></script>
 </body>
 </html>
