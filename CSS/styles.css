@@ -99,12 +99,35 @@ header::after {
   color: #f5efe0; /* texto claro para contraste */
 }
 
-/*
-.medieval-font {
-  font-family: 'MedievalSharp', cursive;
-  color: #f0e6d2;
-  text-shadow: 1px 1px 2px #000;
-} */
+.instructions{
+  list-style: decimal;
+  text-align: left;
+  padding-left: 2rem; /* sangría general, para que aparezcan los números */
+  display: inline-block;
+}
+
+.instructions li {
+  padding-inline-start: 0.6em;
+}
+
+.troop-settings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.btn-calc{
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+  padding: 6px 8px;
+  color: #111;
+  border-radius: 8px;  
+  font-weight: 700;
+  text-decoration: none;   
+  --gold: #b88f4a;
+  --gold-dark: #8f6b33;
+
+}
 
 .fixed-box {
   width: 100%;

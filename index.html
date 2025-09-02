@@ -103,40 +103,47 @@
         
         <div class="glass-bg text-white p-4 text-center medieval-box mx-2">
 
-          <h2 class="medieval-font mb-4">Troop Calculator</h2>
-          <p class="medieval-font mb-4">You can calculate choosing total might or quantity</p>
+          <h2 class="mb-4">Troop Calculator</h2>
+          <ol class="mb-4 instructions">
+            <li>Select a troop type.</li>
+            <li>Choose quantity or might to calculate.</li>
+            <li>Enter amount and press SEND.</li>
+          </ol>
           
-          <!-- Troop selection -->
-          <div class="mb-3 text-start">
-            <label class="medieval-font" for="type">Troop type:</label>
-            <select class="medieval-font" id="type">
-              <option class="medieval-font" value="Pikemen">Pikemen</option>
-              <option class="medieval-font" value="Infantry">Infantry</option>
-              <option class="medieval-font" value="Archer">Archer</option>
-              <option class="medieval-font" value="Porter">Porter</option>
-            </select>
+          <!----- Troop Settings ----->
+          <div class="mb-3 text-start troop-settings">
+            <div>
+          <!----- Troop Type ----->
+              <label for="type">Troop type:</label>
+              <select id="type">
+                <option value="Pikemen">Pikemen</option>
+                <option value="Infantry">Infantry</option>
+                <option value="Archer">Archer</option>
+                <option value="Porter">Porter</option>
+              </select>
+            </div>
+          <!----- Calculation mode ----->
+            <div>
+              <label for="mode">Choose quantity or might:</label>
+              <select id="mode">
+                <option value="quantity">Quantity</option>
+                <option value="might">Might</option>
+              </select>
+            </div>
+          <!----- User inputs ----->
+            <div>
+              <input id="input-container" type="number">
+              <button class="btn-calc">SEND</button>
+            </div>
           </div>
-          <!-- Calculation mode -->
-          <div class="mb-3 text-start">
-            <label class="medieval-font" for="mode">Choose quantity or might:</label>
-            <select class="medieval-font" id="mode">
-              <option class="medieval-font" value="quantity">Quantity</option>
-              <option class="medieval-font" value="might">Might</option>
-            </select>
-          </div>
-          <!-- User inputs -->
-          <div id="inputContainer" class="mb-3 text-start"></div>
-          <!-- Error message -->
-          <div id="resultDiv" class="mb-3 text-start"></div>
-          
           <!-- Table -->
-          <div id="result" class="text-start rounded p-3 fixed-box bg-dark bg-opacity-50 medieval-font">
+          <div id="result" class="text-start rounded p-3 fixed-box bg-dark bg-opacity-50">
             <table id="troop-table">
               <thead>
                 <tr>
                   <th>Image</th>
-                  <th>Level</th>
-                  <th>Name</th>
+                  <th>Tier</th>
+                  <th>Troop Name</th>
                   <th>Food</th>
                   <th>Wood</th>
                   <th>Stone</th>
@@ -313,6 +320,6 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 <!-- My JS -->
-<script src="JS\calculator.js"></script>
+<script type="module" src="js/main.js"></script>>
 </body>
 </html>
